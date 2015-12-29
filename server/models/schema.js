@@ -1,0 +1,51 @@
+var DB = require('../../db');
+var InvestSchema = new DB.mongoose.Schema({
+    account: Number,
+    createDate: String,
+    returnDate: String,
+    interest: Number,
+    user: Object
+});
+
+//用户表
+var PersonSchema = new DB.mongoose.Schema({
+    realName: String,   //定义一个属性name，类型为String
+    loginName: String,  //登录名
+    age: Number,
+    idNumber: String,
+    email: String,
+    mobile: String,
+    password: String
+});
+exports.PersonSchema = DB.db.model('users',PersonSchema);
+
+//用户银行卡表
+var userAccountSchema = new DB.mongoose.Schema({
+    cardNumber: String,  //卡号
+    user: Object,        
+    account: Number,     //金额
+    cardName: String     //所属银行
+});
+exports.userAccountSchema = DB.db.model('user_account',userAccountSchema);
+//银行卡消费记录
+var accountConsume = new DB.mongoose.Schema({
+    cardNumber: String,
+    number: Number,    //金额
+    operete: String,   //操作
+    createDate: String
+})
+//借款表
+var applyloanSchema = new DB.mongoose.Schema({
+    companyName: String,//企业名或个人姓名
+    personName: String,//联系人姓名
+    mobilePhone: String,//手机号
+    companyAddress: String,
+    emailAddress: String,
+    loanMoney: Number, //借款金额
+    loanMonths: Number,//借款期限
+    loanType: String,
+    loanPurpos: String, //借款用途
+    createDate: String,
+    status: String
+});
+exports.applyloanSchema = DB.db.model('applyloan',applyloanSchema);

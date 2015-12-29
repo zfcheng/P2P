@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+</head>
+<body>
+    <% include header.html %>
+    
+
+
+
+
+<link rel="stylesheet" href="/ccc/global/css/base.css" />
+<link rel="stylesheet" href="/ccc/login/css/style.css">
+<link rel="stylesheet" href="/ccc/global/css/base1.css">
+
+<div id="main-container" style="background-color:#f6f8fc;padding:0">
+    <p class="navTitle"><!-- <a href="/">首页</a> > 用户登录 --></p>
+<!--    <img src="/ccc/login/img/bg-log-2.jpg"/>-->
+    <div style="height:30px;"></div>
+    <div class="s-login-view">
+        <div class="s-login-window">
+            <form id="loginForm" action="/login" method="POST">
+                
+                <div class="s-input-wrapper">
+                    <p class="login-error"></p>
+                  <div class="lineUser">
+                      
+                    <img src="/ccc/login/img/user.png"/>
+                    <input type="text" name="loginName" id="txtUserName"   placeholder="用户名/手机号/邮箱" class="loginName"/>
+                  </div>
+                    <div class="lineUser">
+                        <img src="/ccc/login/img/lock.png"/>
+                    <input type="password" name="password" placeholder="请输入密码"  id="txtPassword" />
+                    </div>
+                    <input type="hidden" name="backUrl" value="{{backUrl}}">
+                </div>
+                <div class="rememberPassword">
+                   <div class="banner_right_bluetick pull-left">
+                            <input type="checkbox" id="chkRememberPwd" class="checkbox">
+                            <span class="remember">记住用户名</span>
+                    </div> 
+                    <div class="pull-right">
+                        <a href="/forgot" class="u-float-right">找回密码</a>
+                    </div>
+                </div>
+                <button type="submit"  class="do-login cursor-pointer" onclick="SetPwdAndChk()"  id="login_button">立即登录</button>
+<!--                <button onclick="location.href='/register'">注册</button>-->
+                <p class="needRegister"><img style="margin-right:6px;" src="/ccc/login/img/login-line.png"/>没有账号？立即<a href="/register">注册</a><img style="margin-left:6px;" src="/ccc/login/img/login-line.png"/></p>
+                
+            </form>
+        </div>
+        <div class="loginBanner"><img src="/ccc/register/img/3dab3fae6f6ab017b06cbeb8f11d4107.jpeg" alt=""></div>
+        <p class="prompt">温馨提示：登录密码输错超过五次，帐户会被自动锁定，请致电客服400-872-7676。</p>
+    </div>
+     
+    <div style="height:50px;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+    <% include footer.html %>
+</body>
+<!-- <script src="/javascripts/index.js"></script> -->
+<script>
+    // seajs.use("/javascripts/index.js")
+</script>
+</html>

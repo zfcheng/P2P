@@ -1,0 +1,189 @@
+/*
+   头部样式定义
+*/
+.navbar-top {
+  height: 46px;
+  width: 100%;
+  background: #efefef;
+}
+.navbar-top .container {
+  width: 1170px;
+  position: relative;
+  padding: 3px 10px;
+  color: #bcbcbc;
+}
+.navbar-top .container .contact {
+  font-size: 13px;
+}
+.navbar-top .container .contact ul {
+  height: 36px;
+  line-height: 36px;
+}
+.navbar-top .container .contact ul li {
+  display: inline-block;
+  float: left;
+  font-size: 13px;
+  color: #888888;
+}
+.navbar-top .container .contact .pull-right {
+  color: #888;
+}
+.navbar-top .container .contact .pull-left ul li {
+  margin-right: 15px;
+}
+.navbar-top .container .contact .pull-left ul li span,
+.navbar-top .container .contact .pull-left ul li a {
+  padding-right: 5px;
+  width: 16px;
+}
+.navbar-top .container .contact .pull-left ul li span.head-phone {
+  background: url('/assets/img/head-phone.png') 0 center no-repeat;
+  padding-left: 14px;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weibo {
+  display: inline-block;
+  height: 12px;
+  margin-left: 8px;
+  background: url('/assets/img/head-weibo.png') 0 0 no-repeat;
+  position: relative;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weibo .weibo_diag {
+  border: 1px solid #dacccc;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  display: none;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weibo .weibo_diag img {
+  height: 90px;
+  width: 90px;
+  display: block;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weixin {
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  height: 14px;
+  margin-left: 8px;
+  background: url('/assets/img/head-weixin.png') 0 0 no-repeat;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weixin .weixin_diag {
+  border: 1px solid #dacccc;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  display: none;
+}
+.navbar-top .container .contact .pull-left ul li a.head-weixin .weixin_diag img {
+  height: 90px;
+  width: 90px;
+  display: block;
+}
+.navbar-top .container .contact > span {
+  line-height: 3em;
+  margin: 0 0 0 25px;
+}
+.navbar-top .container .contact > span a {
+  text-decoration: none;
+  color: #9a9a9a;
+}
+.navbar-top .container .contact .glyphicon {
+  top: 2px;
+}
+.navbar-top .container .contact .phone-number {
+  vertical-align: -1px;
+}
+.navbar-top .container .contact .navbar-login-info {
+  margin: 10px 0 0 0;
+}
+.navbar-top .container .contact .navbar-login-info span {
+  color: #bcbcbc;
+}
+.navbar-top .container .contact .navbar-login-info span .login-name {
+  color: #45BDFF;
+}
+.navbar-top .container .contact .navbar-login-info span a {
+  color: #bcbcbc;
+  text-decoration: none;
+}
+.navbar-top .container .contact .navbar-login-info > a {
+  color: #000000;
+  padding: 0 5px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.navbar-top .container .contact .navbar-login-info > a:hover {
+  color: #e8383d;
+}
+.navbar-top .container .contact .navbar-login-info .btn-small {
+  padding: 0 6px;
+}
+.navbar-top .container .code {
+  position: absolute;
+  display: none;
+  top: 48px;
+  width: 125px;
+  border: 1px solid #c2c2c2;
+  left: 10px;
+  z-index: 1;
+  background: #ffffff;
+}
+.navbar-top .container .code p {
+  text-align: center;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 1px 0;
+  background: #F7F7F7;
+  color: #666;
+  font-size: 13px;
+}
+.navbar-top .container .code .qr_img {
+  width: 125px;
+  text-align: center;
+  padding: 1px 0;
+}
+.navbar-top .container .code .qr_img img {
+  width: 120px;
+  height: 120px;
+}
+.navbar {
+  width: 100%;
+  height: 124px;
+  background: transparent;
+  text-align: center;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.navbar .container {
+  margin: 0 auto;
+  width: 1170px;
+}
+.navbar .container .navbar-nav {
+  margin-right: -25px;
+}
+.navbar .container .navbar-nav li > a {
+  background: transparent;
+  height: 122px;
+  color: #555555;
+  background: #fff;
+  font-size: 18px;
+}
+.navbar .container .navbar-nav li.active > a {
+  color: #e8383d;
+}
+.navbar .container .navbar-nav li > a:hover,
+.navbar .container .navbar-nav li > a.active {
+  color: #e8383d;
+}
+.navbar .container .navbar-nav li > a:focus {
+  color: #e8383d;
+}
+.navbar-wrap .container {
+  margin: 0 auto;
+  width: 1170px;
+}
+.navbar-wrap .container .navbar-brand {
+  padding-top: 40px;
+}
+.navbar-wrap .container .navbar-nav li > a {
+  background: #fff;
+}

@@ -1,0 +1,251 @@
+// 这个文件里的内容会覆盖掉 bootstrap 的默认值，如下
+
+@link-color: #c6c6c6;
+
+// 站内用到的其他 css 全局变量，也应该在此设置
+
+@main-container-bg: #fff;
+
+// nav-bar varialbles settings
+@navbar-top-height: 46px;
+@navbar-height: 124px;
+@navbar-width: 100%;
+@navbar-color: #555555;
+@navbar-bgcolor: transparent;
+
+@container-width: 1170px; 
+
+// ext style
+@btnScheduled: #ffa831;
+@btnOpen: #f17420;
+@btnFinished: #FDAD8D;
+@btnSettled: #dddddd;
+@btnCleared: #dddddd;
+
+@red: #f23a2e;
+@orange: #ee761a;
+@orange-dark: #D96309;
+
+@blue-text: #45BDFF;
+
+@bg: #f7f7f7;
+@bg1: #424242;
+@bg2: #f0f0f0;
+@bg3: #3d3d3d;
+/*
+   头部样式定义
+*/
+
+.navbar-top {
+    height: @navbar-top-height;
+    width: 100%;
+    background: #efefef;
+    .container {
+        width: @container-width;
+        position: relative;
+        padding: 3px 10px;
+        color: #bcbcbc;
+        .contact {
+            ul {
+                //                overflow: hidden;
+                height: 36px;
+                line-height: 36px;
+                li {
+                    display: inline-block; 
+                    float: left;
+                    font-size: 13px;
+                    color: #888888;
+                } 
+            }
+            .pull-right {
+                color: #888;
+            } 
+            .pull-left {
+                //                margin: 10px 0 0 7px;
+                ul li {
+                    margin-right: 15px;
+                    span, a {
+                        padding-right: 5px;
+                        width: 16px;
+                    }
+                    // 电话图标
+                    span.head-phone {
+                        background: url('/assets/img/head-phone.png') 0 center no-repeat;
+                        padding-left: 14px;
+                    }
+                    // 微博图标
+                    a.head-weibo {
+                        display: inline-block;
+                        height: 12px;
+                        margin-left: 8px;
+                        background: url('/assets/img/head-weibo.png') 0 0 no-repeat;
+                        position: relative;
+                        .weibo_diag {
+                            border: 1px solid #dacccc;
+                            position: absolute;
+                            top: 30px;
+                            left: 20px;
+                            display: none;
+                            img {
+                                height: 90px;
+                                width: 90px;
+                                display: block;
+                            }
+                        }
+                    }
+                    // 微信图标
+                    a.head-weixin {
+                        position: relative;
+                        display: inline-block;
+                        top: 2px;
+                        height: 14px;
+                        margin-left: 8px;
+                        background: url('/assets/img/head-weixin.png') 0 0 no-repeat;
+                        .weixin_diag {
+                            border: 1px solid #dacccc;
+                            position: absolute;
+                            top: 30px;
+                            left: 20px;
+                            display: none;
+                            img {
+                                height: 90px;
+                                width: 90px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            //            margin: 0 0 0 -25px;
+            font-size: 13px;
+            > span {
+                line-height: 3em;
+                //color: #6a6a6a;
+                margin: 0 0 0 25px;
+                a {
+                    text-decoration: none;
+                    color: #9a9a9a;
+                }
+            }
+            .glyphicon {
+                top: 2px;
+            }
+            .glyphicon-earphone {}
+            .phone-text {}
+            .phone-number {
+                vertical-align: -1px;
+            }
+            .navbar-login-info {
+                margin: 10px 0 0 0;
+                span {
+                    color: #bcbcbc;
+                    .login-name {
+                        //color: #44d3cd;
+                        color: @blue-text;
+                    }
+                    a {
+                        color: #bcbcbc;
+                        text-decoration: none;
+                    }
+                }
+                > a {
+                    color: #000000;
+                    padding: 0 5px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    &:hover {
+                        color: #e8383d;
+                    }
+                }
+                .btn-small {
+                    padding: 0 6px;
+                }
+            }
+        }
+        .code {
+            position: absolute;
+            display: none;
+            top: 48px;
+            width: 125px;
+            border: 1px solid #c2c2c2;
+            left: 10px;
+            z-index: 1;
+            background: #ffffff;
+            p {
+                text-align: center;
+                border-bottom: 1px solid #c2c2c2;
+                padding: 1px 0;
+                background: #F7F7F7;
+                color: #666;
+                font-size: 13px;
+            }
+            .qr_img {
+                width: 125px;
+                text-align: center;
+                padding: 1px 0;
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: @navbar-height;
+    background: @navbar-bgcolor;
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 0;
+    .navbar-header {
+        .navbar-brand {
+            //margin: -15px 0 0 -20px;
+            img.main-logo {
+//                width: 200px;
+//                height: 60px;
+            }
+        }
+    }
+    .container {
+        margin: 0 auto;
+        width: @container-width;
+        .navbar-nav {
+            margin-right: -25px;
+            li > a {
+                background: @navbar-bgcolor;
+                height: @navbar-height - 2;
+                color: @navbar-color;
+                background: #fff;
+                font-size: 18px;
+            }
+            li.active > a {
+                color: #e8383d;
+            }
+            li > a:hover,
+            li > a.active {
+                color: #e8383d;
+            }
+            li > a:focus {
+                color: #e8383d;
+            }
+        }
+    }
+}
+
+// fix html nav style or lte ie8
+.navbar-wrap {
+    //    background: #fff;
+    //    border-bottom: 1px solid #ddd;
+    .container {
+        margin: 0 auto;
+        width: @container-width;
+        .navbar-brand {
+            padding-top: 40px;
+        }
+        .navbar-nav li > a {
+            background: #fff;
+        }
+    }
+}

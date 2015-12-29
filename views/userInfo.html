@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+</head>
+<body>
+    <% include header.html %>
+    <%= title %>
+    
+
+
+
+<link rel="stylesheet" href="/ccc/account/css/common.css">
+<link rel="stylesheet" href="/ccc/account/css/banks.css">
+<link rel="stylesheet" href="/ccc/account/css/settings.css">
+<div class="account-wraper">
+    <!-- {{>topNav}} -->
+    
+    <div class="account-settings-wrapper">
+        <div class="space space-20"></div>
+        <div class="has-line">
+            <div class="row ccc-container">
+                <div class="col-md-12">
+                    <div class="header-text pull-left">12312312312</div>
+                    <div class="ccc-tab pull-right" data-no-tab="true">
+                        <ul class="tabs">
+                           <!--  {{#each (tabs[tabIndex]).subTabs }}
+                                <li class="{{#if subTabIndex === @index }}active{{/if}}">
+                                    <a href="{{ url }}">{{ text }}</a>
+                                </li>
+                            {{/each}} -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space space-20"></div>
+        <div class="ccc-container row">
+            <div class="col-md-12 ccc-invests-wrap" id="ractive-container">
+                <div class="space space-20"></div>
+                <p class="loading align-center">加载中...</p>
+            </div>
+        </div>
+    </div>
+    <div class="space space-50">&nbsp;</div>
+</div>
+
+<script src="/ccc/account/js/main/settings/index.js"></script>
+<script src="/ccc/account/js/main/settings/paypwd.js"></script>
+<script src="/ccc/account/js/main/settings/umpay.js"></script>
+<script src="/ccc/account/js/main/settings/bankcard.js"></script>
+<script src="/ccc/account/js/main/settings/agreement.js"></script>
+<script src="/ccc/account/js/main/settings/safety.js"></script>
+<script src="/ccc/account/js/main/settings/userInfo.js"></script>
+
+
+
+
+
+    <% include footer.html %>
+</body>
+<!-- <script src="/javascripts/index.js"></script> -->
+<script>
+    seajs.use("/javascripts/index.js")
+</script>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/ccc/global/css/base.css">
+<link rel="stylesheet" href="/ccc/global/css/base1.css">
+<!--[if lt IE 8]><script src="http://wuyongzhiyong.b0.upaiyun.com/iedie/v1.1/script.min.js"></script><![endif]-->
+<meta name="renderer" content="webkit">
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+<script>(function(global) {
+  'use strict';
+  global.console = global.console || {};
+  var con = global.console;
+  var prop, method;
+  var empty = {};
+  var dummy = function() {};
+  var properties = 'memory'.split(',');
+  var methods = ('assert,clear,count,debug,dir,dirxml,error,exception,group,' +
+     'groupCollapsed,groupEnd,info,log,markTimeline,profile,profiles,profileEnd,' +
+     'show,table,time,timeEnd,timeline,timelineEnd,timeStamp,trace,warn').split(',');
+  while (prop = properties.pop()) if (!con[prop]) con[prop] = empty;
+  while (method = methods.pop()) if (!con[method]) con[method] = dummy;
+  })(typeof window === 'undefined' ? this : window);</script>
+<!--[if lt IE 10]>
+<script src="/ccc/global/js/ie8fix.js"></script>
+<![endif]-->
+<script src="/ccc/global.js" async></script>
+<link rel="stylesheet" href="/ccc/global/css/base.css" />
+<link rel="stylesheet" href="/ccc/global/css/base1.css" />
+<!--[if IE 8]><link rel="stylesheet" href="/ccc/global/css/ie8.css" /><![endif]-->
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+<title>{{title}}</title>
+<script>
+    window.CC = {};{{{ state }}}
+    window.global = window.global || window;
+    window.process = window.process || CC.process;
+    if(process.env.NODE_ENV === 'development'){document.write('<script src="/ccc/template-watch/js/getRactiveTemplate.js"></'+'script>');}
+    if(process.env.NODE_ENV === 'development' || process.env.NODE_APP_INSTANCE === 'uat'){document.write('<script src="/ccc/inspect/js/main/inspect.js"></'+'script>');}
+</script>
+<script>
+    (function (match) {
+        if (match) {
+            document.cookie = match[1] + '; Max-Age=1800; Path=/';
+        }
+    }((document.cookie || '')
+        .match(/(?:^|;\s*)(ccat=[0-9a-f]{64})/)));
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c2450bbb743e30cea0ef4d21fbce95d2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name="Keywords" content="{{keywords}}">
+<meta name="Description" content="{{description}}">
+
+<!-- 导航开始 -->
+
+<div class="s-header" id="s-header-height">
+
+    <div class="s-header-info" id="nav-color" style="background:#eee">
+        <div class="s-header-info-content u-pos-r-center">
+            <span class="nav-customer" style="color:#999">客服热线：400-872-7676<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAxNDcwNF8zMjA0NDJfNDAwODcyNzY3Nl8yXw" style="margin-top:-6px;margin-right:24px;"><img src="/ccc/global/img/navQQ.png"  onmouseover="this.src='/ccc/global/img/blue-qq.png'" onmouseout="this.src='/ccc/global/img/navQQ.png'"/></a></span>
+            <span class="nav-aboutus">关注我们：            <a href="http://weibo.com/5623474415/profile?rightmod=1&wvr=6&mod=personinfo/" target="_blank"  class="nav-weibo" style="margin-top:-5px;"><img src="/ccc/global/img/navWeibo.png"  onmouseover="this.src='/ccc/global/img/yellow-weibo.png'" onmouseout="this.src='/ccc/global/img/navWeibo.png'"/></a></span>
+
+            <img class="weixin-icon" src="/ccc/global/img/navWeixin.png" onmouseover="this.src='/ccc/global/img/green-weixin.png'" onmouseout="this.src='/ccc/global/img/navWeixin.png'" />
+            <img class="erweima erweima-act2" src="/ccc/global/img/erweima.png"/>
+            {{#if user}}
+
+             <a href="/help/aboutus" class="text account" style="color:#999;font-size:12px;margin-left:10px;text-decoration:none">帮助中心 </a> 
+            {{#if user.loginName}}
+            <a href="/newAccount/message">
+                <div  style="color:#f58220;position:relative;bottom:4px;" class="text"><img src="/ccc/newAccount/img/message.png" alt="" style="margin:0;width:20px;"><span id='head-message-container' style="color:#009ada;font-size:12px;margin:0;position:relative;top:1px;margin-left:5px;"></span>
+				</div>
+            </a>
+            {{/if}}
+            <a href="/logout" class="text" style="color:#999;margin-right:5px;">退出&nbsp;&nbsp;|</a>
+			{{#if user.name}}
+            	<a href="/newAccount/home"><div id='head-ractive-container' style="color:#009ada;position:relative;bottom:1px;" class="text"></div></a>
+			{{else}}
+            	<a href="/newAccount/home"><div id='head-ractive-container' style="color:#f58220;position:relative;bottom:1px;" class="text"></div></a>
+			{{/if}}
+            {{else}}
+            <!-- <div class="nav-mobile">
+
+                <span>|</span> <a href="/help" id="mobileCustomer" class="text">手机客户端</a>
+                <img src="/ccc/global/img/navMobile.png" />
+            </div> -->
+
+            <div class="nav-help">
+                <span>|</span><a href="/help/aboutus" id="nav-help" class="text">帮助中心</a>
+            </div>
+
+            <div class="nav-fastregister">
+                <span>|</span><a href="/register" id="dingbuzhuce" class="text">注册</a>
+            </div>
+            <div class="nav-fastlogin">
+                <!--               <span>|</span>-->
+                <a href="/login" id="dingbudenglu" class="text">登录</a>
+            </div>
+
+
+            {{/if}}
+        </div>
+      
+    </div>
+    <div class="s-header-menu" id="menu">
+        <div class="s-header-menu-content u-pos-r-center">
+            <a href="/" style="float: left;" alt="奇乐融" title="奇乐融">
+                <img class="s-icon" style="margin-top:26px;width:300px;" src="/ccc/global/img/navLogo.png">
+            </a>
+
+            <div id="family" onmouseover="this.style.cursor='pointer'"   onmouseout="this.style.cursor='normal'">
+                <p style="background: url(/ccc/global/img/slide.png) no-repeat;text-align:left;"  >联想控股大家庭</p>
+                            <ul style="display: none;">
+
+ 				                <li><a href="http://www.legendholdings.com.cn/Pages/Index.aspx" target="_blank">联想控股</a></li>
+                                <li><a href="http://www.lenovo.com.cn/" target="_blank">联想集团</a></li>
+                                <li><a href="http://www.zqfinancial.com/" target="_blank">正奇金融</a></li>
+                                <li><a href="http://www.legendcapital.com.cn/" target="_blank">君联资本</a></li>
+                                <li><a href="http://www.honycapital.com/" target="_blank">弘毅投资</a></li>
+                                <li><a href="http://www.raycomchina.com/" target="_blank">融科智地</a></li>
+                                <li><a href="http://www.joyvio.com/" target="_blank">佳沃集团</a></li>
+                                <li><a href="http://www.legendholdings.com.cn/Business/Wine.aspx" target="_blank">丰联集团</a></li>
+                                <li><a href="http://www.levima.cn/" target="_blank">联泓集团</a></li>
+                                <li><a href="http://www.legendholdings.com.cn/Business/BetterChain.aspx" target="_blank">增益供应链</a></li>
+                                <li><a href="http://www.legendholdings.com.cn/Business/EnsenCare.aspx" target="_blank">安信颐和</a></li>
+                                <li><a href="http://www.lb-inv.com/" target="_blank">联保投资</a></li>
+                                <li><a href="http://www.lakala.com/?COLLCC=3110440596&" target="_blank">拉卡拉</a></li>
+                                <li><a href="http://www.xingheng.com.cn/" target="_blank">苏州星恒</a></li>
+                                <li><a href="http://www.ibyergroup.com/" target="_blank">拜博口腔</a></li>
+                                <li><a href="http://www.zuche.com/" target="_blank">神州租车</a></li>
+                                <li><a href="http://www.huge.com.cn/" target="_blank">上海弘基</a></li>
+                                <li><a href="http://www.legendstar.com.cn/" target="_blank">联想之星</a></li>
+                           
+            </ul>
+            </div>
+
+            <ul class="u-nolist-ul">
+                {{#if !user.enterprise}}
+                    <li><a id="index" href="/">首页</a></li>
+                    <li><a id="touzi" href="/invest">我要投资</a></li>
+                    <li><a id="jiekuan" href="/applyloan">我要借款</a></li>
+                {{/if}}
+                <li>
+					{{#if user}}
+						{{#if user.name || user.enterprise}}
+						<a id="safety" href="/newAccount/home">我的账户</a>
+						{{else}}
+						<a id="safety" href="/newAccount/settings/authentication">我的账户</a>
+						{{/if}}
+					{{else}}
+						<a id="safety" href="/login">我的账户</a>
+					{{/if}}
+				</li>
+
+                <li><a id="help" href="/guide">新手引导</a></li>
+                <li style="margin-left:24px;"><a id="aboutus" href="/aboutus/aboutus" >关于我们</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div id="main-container" style="padding-bottom:0"></div>
+
+<div id="mask-layer-wraper">
+</div>
+<div id="login-wraper">
+</div>
+<div id="register-wraper">
+
+</div>
+<div id="service-agreement-wraper">
+</div>
+<div id="quickInvest-agreement-wraper"></div>
+<div id="quickRepay-agreement-wraper"></div>
+<div id="regist-agreement-wraper">
+</div>
+
+<div class="s-footer" id="footer-color-box">
+    <div class="footerBox">
+    <div class="s-footer-nav" id="footer-color">
+        <div style="width:1100px;" class="s-footer-nav-content u-pos-r-center">
+            <div class="bottom-left">
+                <div class="bottom-right-service"><img src="/ccc/global/img/tel.png"><span style="color:#bcbcbc;">客服热线</span><span class="telNum">400-872-7676</span></div>
+                    <p class="bottom-right-mail">服务时间：工作日 8:30 — 18:00</p>
+                <p class="bottom-right-online">在线客服：<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAxNDcwNF8zMjA0NDJfNDAwODcyNzY3Nl8yXw"><img src="/ccc/global/img/navQQ.png" onmouseover="this.src='/ccc/global/img/blue-qq.png'" onmouseout="this.src='/ccc/global/img/navQQ.png'" /></a></p>
+				<div class="bottom-right-aboutus-box">
+                    <P class="bottom-right-aboutus">关注我们：<a href="http://weibo.com/5623474415/profile?rightmod=1&wvr=6&mod=personinfo/" target="_blank"><img src="/ccc/global/img/navWeibo.png" onmouseover="this.src='/ccc/global/img/yellow-weibo.png'" onmouseout="this.src='/ccc/global/img/navWeibo.png'" /></a>
+                        <img style="margin-left:8px;" class="weixin-icon weixin-icon-act" src="/ccc/global/img/navWeixin.png" onmouseover="this.src='/ccc/global/img/green-weixin.png'" onmouseout="this.src='/ccc/global/img/navWeixin.png'"/>
+                                    
+                </P>
+				<img class="erweima erweima-act" src="/ccc/global/img/erweima.png"/>
+				</div>
+            </div>
+            <div class="bottom-right">
+
+                <div class="bottom-rightApp" style="margin-right:34px;">
+                    <img src="/ccc/global/img/dingyue.png"/>
+                    <p class="text-p">微信订阅号</p>
+                </div>
+<!--
+                <div class="bottom-rightApp">
+                    <img src="/ccc/global/img/fuwu.png"/>
+                    <p class="text-p">微信服务号</p>
+                </div>
+-->
+            </div>
+
+            <dl class="footer-guide">
+                <dt><img src="/ccc/global/img/aboutus.png"/><a href="/aboutus/aboutus">关于我们</a></dt>
+                <dd><a href="/aboutus/aboutus">奇乐融简介</a></dd>
+                <dd class="footer-guide-style"><a href="/aboutus/background">股东背景</a></dd>
+                <dd><a href="/aboutus/team">团队介绍</a></dd>
+                <dd><a href="/aboutus/partner">合作伙伴</a></dd>
+            </dl>
+            <dl class="footer-guide">
+                <dt><img src="/ccc/global/img/help.png"/><a href="/help/aboutus">帮助中心</a></dt>
+                <dd><a href="/help/login">注册/登录</a></dd>
+                <dd class="footer-guide-style"><a href="/help/cash">充值/提现</a></dd>
+                <dd><a href="/help/money">如何投资</a></dd>
+                <dd><a href="/help/safety">风控安全</a></dd>
+            </dl>
+              <!-- <dl class="footer-guide">
+                <dt><img src="/ccc/global/img/map.png"/><a href="">网站地图</a></dt>
+            </dl> -->
+        </div>
+        </div>
+    </div>
+    <div class="bottom-footer-box">
+        <div class="bottom-footer">
+            <div class="copyright">
+                版权所有©2015奇乐融<a href="/">www.qilerong.com</a>  &nbsp;&nbsp;皖ICP备15013787号-1
+            </div>
+            <div>
+                <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&dn=www.qilerong.com" target="_blank"><img src="/ccc/global/img/footer-norton.png" style="width:100px" /></a>
+                <a href="http://webscan.360.cn/index/checkwebsite/url/www.qilerong.com"><img border="0" src="/ccc/global/img/footer-360.png" class="footer-360"/></a>
+                <!-- <img src="/ccc/global/img/computer.png" /> -->
+                <a id='___szfw_logo___' href='https://credit.szfw.org/CX20150915011323560186.html' target='_blank'><img src='/ccc/global/img/footer-chengxin.png' border='0' class="footer-360"/></a>
+               <!--  <img src="/ccc/global/img/cfca.png" />
+                <img src="/ccc/global/img/v.png" class="footer-360" /> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--    旁边导航条-->
+<div class="side-bar-box">
+    <div class="side-bar">
+         <a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAxNDcwNF8zMjA0NDJfNDAwODcyNzY3Nl8yXw"><img src="/ccc/global/img/service.png" /></a>
+        <a href="javascript:;" class="calculator-create"><img src="/ccc/global/img/calculator.png" /></a>
+        <a class="back-top" href=""><img src="/ccc/global/img/backTop.png" /></a>
+    </div>
+</div>
+<script>
+    //var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?63b2565d3a9cd44e576abfe2fd84492e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+	
+	//QQ
+//	function clickQq(){
+//		document.write('<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAxNDcwNF8zMTg5OTVfNDAwODcyNzY3Nl8"></"+"script>');
+//		window.location.reload();
+//	}
+(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();
+		
+</script>
+
+<script src="/ccc/global/js/main/header.js" async defer></script>
